@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #eef1f5;
+  color: #1f2933;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.jogo-container {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border: 2px solid #2b3a4a;
+  border-radius: 24px;
+  padding: 28px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.titulo {
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.rodada {
+  margin: 0;
+  font-size: 18px;
+  color: #3a4a5a;
+}
+
+.rodada strong {
+  font-weight: 700;
+}
+
+.jogadores {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+}
+
+.jogador-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+}
+
+.jogador-col h2 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+  color: #2b3a4a;
+}
+
+.divisor {
+  width: 1px;
+  align-self: stretch;
+  background: #c6ccd3;
+  margin-top: 4px;
+}
+
+.dados-row {
+  display: flex;
+  gap: 10px;
+}
+
+.dado {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dado img {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-jogar {
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 8px;
+  border: 2px solid #2b3a4a;
+  background: #ffffff;
+  color: #2b3a4a;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn-jogar:hover:not(:disabled) {
+  background: #e8f0fe;
+}
+
+.btn-jogar:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn-jogar:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: repeating-linear-gradient(
+    45deg,
+    #f2f2f2,
+    #f2f2f2 6px,
+    #e6e6e6 6px,
+    #e6e6e6 12px
+  );
+}
+
+.mensagem-box {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #2b3a4a;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b3a4a;
+}
+
+.btn-jogar-novamente {
+  margin-top: 4px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: 2px solid #2b3a4a;
+  background: #2b3a4a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.15s ease;
+}
+
+.btn-jogar-novamente:hover {
+  background: #1f2933;
+}
+
+.btn-jogar-novamente:active {
+  transform: scale(0.97);
+}
